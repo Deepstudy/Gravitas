@@ -31,8 +31,8 @@ CRUD APIS for notes
 - variables named using `lowerCamelCase`
 
 ## Mysql schemas
-
-### Create user table
+```
+#Create user table
 CREATE TABLE `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-### Create user sessions table
+#Create user sessions table
 CREATE TABLE `user_sessions` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE `user_sessions` (
   CONSTRAINT `user_id` FOREIGN KEY (`id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-### Create notes table
+#Create notes table
 CREATE TABLE `notes` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `created_by` int unsigned NOT NULL,
@@ -73,6 +73,7 @@ CREATE TABLE `notes` (
   KEY `user_id_idx` (`created_by`),
   CONSTRAINT `created_by` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
 
 
 ## Things not considered
