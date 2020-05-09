@@ -3,12 +3,9 @@ dotenv.config();
 import { sequelize } from '@app/configs/Sequelize';
 import {Routes} from '@app/routes/routes';
 import Logger from '@app/services/Logger';
-// import TraceIdService from '@nineleaps/trace-id-service';
 import * as bodyParser from 'body-parser';
 import express from 'express';
-// import swaggerJSDoc from 'swagger-jsdoc';
-// import swaggerUi from 'swagger-ui-express';
-// import uuid from 'uuid/v4';
+
 import AppConstants, { ERROR_CODES, ERROR_MESSAGES } from './constants/AppConstants';
 import { AppResponse } from './services/AppResponse';
 
