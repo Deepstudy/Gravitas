@@ -1,0 +1,27 @@
+export const ERROR_CODES = {
+    ERR_INTERNAL_SERVER_ERROR: 'ERR_INTERNAL_SERVER_ERROR',
+    ERR_USER_VERIFIED: 'ERR_USER_VERIFIED',
+    SUCCESS: 'SUCCESS',
+    ERR_UNAUTHORIZED: 'ERR_UNAUTHORIZED',
+    ERR_INVALID_NOTE:'ERR_INVALID_NOTE',
+    ERR_INVALID_ACCESS:'ERR_INVALID_ACCESS'
+    
+};
+
+export const ERROR_MESSAGES = {
+    ERR_INTERNAL_SERVER_ERROR: 'ERR_INTERNAL_SERVER_ERROR',
+    ERR_USER_VERIFIED: 'ERR_USER_VERIFIED',
+    INVALID_PASSWORD: 'Invlaid Password. Password can not be empty',
+    ERR_UNAUTHORIZED: 'You are not authorized to perform this action',
+    ERR_INVALID_NOTE:'Note title missing',
+    ERR_INVALID_ACCESS:'Invalid access to note'
+};
+
+
+
+
+
+export default {
+    ERROR_CODES,
+    ERROR_MESSAGES
+};
