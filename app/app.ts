@@ -1,5 +1,4 @@
 import * as dotenv from 'dotenv';
-
 dotenv.config();
 import { sequelize } from '@app/configs/Sequelize';
 import {Routes} from '@app/routes/routes';

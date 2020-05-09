@@ -13,21 +13,21 @@ if (process.env.ENABLE_SQL_LOG === 'true') {
     };
 }
 export const sequelize = new Sequelize.Sequelize(
-    'gravitas',
-    'root',
-    'uselessc1354',
+    database,
+    username,
+    password,
     {
-        host:'localhost',
-        port:3306,
-        dialect:'mysql',
-        logging: false,
+        host:host,
+        port:parseInt(process.env.DB_PORT),
+        dialect:process.env.DB_DIALECT,
+        logging:logSetting,
         pool: {
             // tslint:disable-next-line: radix
-            max: 1000,
+            max: parseInt(process.env.DB_MAX_CON_POOL),
             // tslint:disable-next-line: radix
-            min:10,
+            min:parseInt(process.env.DB_MIN_CON_POOL),
             // tslint:disable-next-line: radix
-            idle:0,
+            idle:parseInt(process.env.DB_IDLE_CON),
         },
     },
 );
