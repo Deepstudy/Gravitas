@@ -77,7 +77,9 @@ CREATE TABLE `notes` (
 
 
 ## Things not considered
-1. Unit testing , only manual done
-2. Code documemtation(comments on public functions) as the functions are self explanatory
-3. Validation layer for request such as ajv
+1. Unit testing , only manual done.
+2. Code documemtation(comments on public functions) as the functions are self explanatory.
+3. Validation layer for request such as ajv.
 4. If sevral middlewares are there they can be grouped together , right now auth middleware is written in a service.
+5. Seeds and migrations.
+6. Jwt authentication as there is no user login system.
